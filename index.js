@@ -9,29 +9,28 @@ addBoard({
     ],
     css: [
         
-    ],
-    blocks: [
+   blocks: [
         "blocks/blocks_pin.js",
         "blocks/blocks_advanced.js",
-
         "blocks/generators_pin.js",
         "blocks/generators_advanced.js",
-        
+       
         "blocks/beetlecar_blocks.js",
         "blocks/beetlecar_gen.js",
-        //"blocks/test_blocks.js",
-        //"blocks/test_gen.js"
 
     ],
     modules: [
+        "modules/beetlecar.py",
+        "modules/beetlecar_BLE.py",
+        "modules/beetlecar_IR.py",
      ],
     firmware: [
         {
-            name: "MicroPython for ESP32 Dev Board V1.6.0",
-            path: "firmware/MicroPython.for.ESP32.Dev.Board.V1.6.0.bin",
-            version: "V1.6.0",
-            date: "2021-1-30",
-            board: "ESP32 Dev Board",
+            name: "MicroPython for Beetle Car V1.0.0",
+            path: "firmware/MicroPython.for.BeetleCar.V1.0.0.bin",
+            version: "V1.0.0",
+            date: "2023-7-30",
+            board: "Beetle Car",
             cpu: "ESP32"
         }
     ],
@@ -105,27 +104,26 @@ addBoard({
 
 
     ],
-    usb: [
+     usb: [
         { // CP2104
             vendorId: "10C4",
             productId: "EA60"
         }
     ],
     autoCompletion: { },
-    level: [
+   level: [
         {
             name: "Beginner",
             description: "",
             icon: "../kidbright32/images/puzzle.png",
             blocks: [
                 {
-                   
                     
                     name: "Beetle Car",
-                    icon: "images/beetlecar.png",
+                    icon: "../beetlecar_v1/images/beetlecar.png",
                     color: "#e64c3c",
                     blocks: [
-                        {
+                 {
                             xml: '<label text="Beetlecar"></label>'
                             
                         },
@@ -298,7 +296,7 @@ addBoard({
                         //servo Start////////////////////////////////
                         {
                             xml: `
-                                <block type="servo">  
+                                <block type="servo">
                                     <value name="pin">
                                         <shadow type="math_number">
                                             <field name="NUM">16</field>
@@ -312,8 +310,6 @@ addBoard({
                                 </block>
                             `
                         },
-                        
-                        
                         //servo End //////////////////////////////////
 
                         {
@@ -321,34 +317,12 @@ addBoard({
                         },
 
                          //LED Start //////////////////////////////////
-                        /*{
+                        {
                             xml: `
                             <block type="led_onoff">
                                 <value name="pin_trig">
                                     <shadow type="math_number">
                                         <field name="NUM">Left ON</field>
-                                    </shadow>
-                                </value>
-                            </block>
-                        `
-                        },*/
-                        {
-                            xml: `
-                            <block type="led_left">
-                                <value name="pin_trig">
-                                    <shadow type="math_number">
-                                        <field name="NUM">Left ON</field>
-                                    </shadow>
-                                </value>
-                            </block>
-                        `
-                        },
-                        {
-                            xml: `
-                            <block type="led_right">
-                                <value name="pin_trig">
-                                    <shadow type="math_number">
-                                        <field name="NUM">Right ON</field>
                                     </shadow>
                                 </value>
                             </block>
