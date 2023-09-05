@@ -472,12 +472,3 @@ class SSD1306_I2C(SSD1306):
         
 #END STATE OLED
 
-#SERVOR STATE START
-
-def servo_LiftUp(angle):
-    PWM(Pin(17), freq=50).duty(int(0.5 * angle + 31))
-
-def servo_Clamp(angle):
-    PWM(Pin(16), freq=50).duty(int((4/9) * angle + 48))
-
-#SERVOR STATE END
