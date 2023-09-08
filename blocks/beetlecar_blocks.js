@@ -49,6 +49,56 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "",
   "helpUrl": ""
 },
+{
+  "type": "new_motor3",
+  "message0": "Motor %1 move %2 at speed %3",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "motor",
+      "options": [
+        [
+          "left",
+          "left"
+        ],
+        [
+          "right",
+          "right"
+        ],
+        [
+          "all",
+          "all"
+        ]
+      ]
+    },
+    {
+      "type": "field_dropdown",
+      "name": "move",
+      "options": [
+        [
+          "forward",
+          "forward"
+        ],
+        [
+          "backward",
+          "backward"
+        ]
+      ]
+    },
+    {
+      "type": "field_number",
+      "name": "speed",
+      "value": 204,
+      "min": 0,
+      "max": 1023
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
 
 //Motor End //////////////////////////////////
 
@@ -62,12 +112,12 @@ Blockly.defineBlocksWithJsonArray([
       "name": "pin",
       "options": [
        [
-          "Lift Up/Lift Down (S2)",//ข้อความตัวเลือก
-          "17"//ค่าที่ส่งไปให้ตัว Generators
+          "Lift Up/Lift Down (S1)",//ข้อความตัวเลือก
+          "16"//ค่าที่ส่งไปให้ตัว Generators
         ],
         [
-          "Clamp (S1)",//ข้อความตัวเลือกที่2
-          "16"//ค่าที่ส่งไปให้ตัว Generators
+          "Clamp (S2)",//ข้อความตัวเลือกที่2
+          "17"//ค่าที่ส่งไปให้ตัว Generators
         ]
       ]
     },
@@ -315,8 +365,9 @@ OLED End *////////////////////////////////////
 //Buzzer End /////////////////////////////////
 
 //LED Start //////////////////////////////////
+
 {        
-  "type": "led_onoff",
+  "type": "led_left",
             "message0": "LED: %1",
             "args0":[
             {
@@ -325,6 +376,28 @@ OLED End *////////////////////////////////////
               "options": [
                 [Blockly.Msg.LED_LIFT_Msg , "1"],
                 [Blockly.Msg.LEFT_OFF , "2"],
+                
+              ]
+                
+            }
+          ], 
+          "inputsInline": true,
+          "previousStatement": null,
+          "nextStatement": null,
+          "colour": "#0aa83c",
+          "tooltip": "",
+          "helpUrl": ""
+          
+},
+{        
+  "type": "led_right",
+            "message0": "LED: %1",
+            "args0":[
+            {
+              "type": "field_dropdown",
+              "name": "pin_trig",
+              "options": [
+                
                 [Blockly.Msg.LED_RIGHT_Msg , "3"],                
                 [Blockly.Msg.RIGHT_OFF , "4"]
               ]
@@ -439,7 +512,7 @@ OLED End *////////////////////////////////////
   {
     
     "type":"switch",
-        "message0": "Switch: %1 is put",
+        "message0": "Switch: %1 is push",
         "args0":[
           {
             "type" : "field_dropdown",
