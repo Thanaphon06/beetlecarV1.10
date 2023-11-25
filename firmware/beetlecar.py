@@ -432,12 +432,13 @@ twinkle_twinkle = [0, 0, 6, 6, 9, 9, 6, 13, 5, 5, 4, 4, 2, 2, 0, 13, 6, 6, 5, 5,
 
 bitsy_spider = [9, 0, 0, 2, 4, 4, 13, 4, 2, 0, 2, 4, 2, 13, 4, 4, 5, 7, 13, 7, 5, 4, 5, 7, 4, 0, 0, 2, 4, 13, 4, 2, 0, 2, 4, 0, 13, 7, 7, 0, 0, 0, 2, 4, 4, 13, 4, 2, 0, 2, 4, 0]
 
+
 #SERVOR STATE START
 
 def servo_LiftUp(angle):
-    PWM(Pin(16), freq=50).duty(int(0.5 * angle + 31))
+    PWM(Pin(17), freq=50).duty(int(0.5 * angle + 31))
 
 def servo_Clamp(angle):
-    PWM(Pin(17), freq=50).duty(int((4/9) * angle + 48))
+    PWM(Pin(16), freq=50).duty(int((4/9) * angle + 48))
 
 #SERVOR STATE END

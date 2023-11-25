@@ -1,6 +1,6 @@
 addBoard({
-    id: "esp32-dev-board",
-    name: "ESP32 Dev Board",
+    id: "beetlecarV1.10-main",
+    name: "Beetle Car V1.0",
     description: "",
     image: "images/beetlecar.png",
     chip: "ESP32",
@@ -19,8 +19,6 @@ addBoard({
         
         "blocks/beetlecar_blocks.js",
         "blocks/beetlecar_gen.js",
-        //"blocks/test_blocks.js",
-        //"blocks/test_gen.js"
 
     ],
     modules: [
@@ -94,10 +92,12 @@ addBoard({
             name: "Servo Clamp Object 1",
             files: "examples/servo_ex",
         },
-        ///{
-        ///    name: "Servo Hold Object",
-        ///    files: "examples/HBD_car",
-       /// },
+        "IR_Signal",
+        {
+            name: "IR Command",
+            files: "examples/ir_command",
+        },
+        
        
 
 
@@ -496,6 +496,11 @@ addBoard({
                                 </block>
                             `
                         },*/
+                        {
+                            xml: '<label text="IR Signal"></label>',
+                        },
+                        "ir_sig_new2",
+                        "ir_comman_if",
                     ]
                 },
                 {
