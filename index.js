@@ -33,6 +33,7 @@ addBoard({
             cpu: "ESP32"
         }
     ],
+
     examples: [
         "Switch",
         {
@@ -48,20 +49,6 @@ addBoard({
             name: "Ultrasonic",
             files: "examples/ultrasonic_neo",
         },
-        /*"BlueTooth",
-        {
-            name: "Bluetooth Command",
-            files: "examples/bluetooth_ex",
-        },
-        "IR_Signal",
-        {
-            name: "Read IR Signal",
-            files: "examples/read_ir",
-        },
-        {
-            name: "IR Command",
-            files: "examples/ir_remote",
-        },*/
         "Line Tracking",
         {
             name: "Line Tracking",
@@ -97,10 +84,6 @@ addBoard({
             name: "IR Command",
             files: "examples/ir_command",
         },
-        
-       
-
-
     ],
     usb: [
         { // CP2104
@@ -108,6 +91,7 @@ addBoard({
             productId: "EA60"
         }
     ],
+
     autoCompletion: { },
     level: [
         {
@@ -117,7 +101,6 @@ addBoard({
             blocks: [
                 {
                    
-                    
                     name: "Beetle Car",
                     icon: "images/beetlecar.png",
                     color: "#e64c3c",
